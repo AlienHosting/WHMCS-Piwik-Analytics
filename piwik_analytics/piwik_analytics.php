@@ -80,7 +80,7 @@ function piwik_analytics_output($vars) {
 		return false;
 	}
 	
-	$result = (json_decode(file_get_contents("{$vars['piwikUrl']}?module=API&method=SitesManager.getSitesIdFromSiteUrl&url=http%3A%2F%2F{$_SERVER['SERVER_NAME']}&format=JSON&tokenAuth={$vars['tokenAuth']}"),TRUE));
+	$result = json_decode(file_get_contents("{$vars['piwikUrl']}?module=API&method=SitesManager.getSitesIdFromSiteUrl&url=http%3A%2F%2F{$_SERVER['SERVER_NAME']}&format=JSON&token_auth={$vars['tokenAuth']}"),TRUE);
 
 	if(count($result)>0){
 		if ($result[0]['idsite'] == $vars['piwikID']){
