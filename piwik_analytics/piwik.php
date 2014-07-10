@@ -69,11 +69,11 @@ if (!$vars['tokenAuth'] || !$vars['piwikUrl']) {
 // Edit the line below, and replace http://piwik-server.com/piwik/ 
 // with your Piwik URL ending with a slash.
 // This URL will never be revealed to visitors or search engines.
-$PIWIK_URL = $vars['piwik_url'];
+$PIWIK_URL = $vars['piwikUrl'];
 
 // Edit the line below, and replace xyz by the token_auth for the user "UserTrackingAPI"
 // which you created when you followed instructions above.
-$TOKEN_AUTH = $vars['token_auth'];
+$TOKEN_AUTH = $vars['tokenAuth'];
 
 // Maximum time, in seconds, to wait for the Piwik server to return the 1*1 GIF
 $timeout = 5;
